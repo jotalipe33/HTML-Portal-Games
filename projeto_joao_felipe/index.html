@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Felipe</title>
+
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS INTERNO (3 elementos: footer, caption e aside h3) -->
+    <style>
+        footer {
+            background-color: #222222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        caption {
+            font-weight: bold;
+            padding: 8px;
+        }
+        aside h3 {
+            border-bottom: 2px solid orange;
+        }
+    </style>
+</head>
+
+<body class="joao_azul">
+
+    <header>
+        <h1>Portal Games</h1>
+        <nav>
+            <ul class="joao_menu">
+                <li><a href="#joao_destaques">Destaques</a></li>
+                <li><a href="#joao_generos">Gêneros</a></li>
+                <li><a href="#joao_galeria">Galeria</a></li>
+                <li><a href="#joao_cards">Cards</a></li>
+                <li><a href="#joao_tabela">Tabela</a></li>
+                <li><a href="#joao_faq">FAQ</a></li>
+                <li><a href="#joao_lista_secao">Lista</a></li>
+                <li><a href="#joao_cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- BANNER -->
+        <section id="joao_banner">
+            <img class="joao_banner_img" src="img/banner.jpg" alt="Banner do Portal Games">
+            <h2 style="text-align: center;">Bem-vindo ao Portal Games</h2>
+            <p style="font-size: 18px;">Seu portal sobre jogos: gêneros, indicações, dúvidas e muito mais.</p>
+        </section>
+
+        <div id="container">
+
+            <!-- ÁREA PRINCIPAL -->
+            <div class="joao_conteudo">
+
+                <!-- DESTAQUES (GRID B: 1fr 2fr 1fr) -->
+                <section id="joao_destaques">
+                    <h2>Destaques</h2>
+                    <div class="joao_destaques_grid">
+                        <article class="joao_destaque">
+                            <h3>Indie</h3>
+                            <p>Jogos independentes com ideias criativas.</p>
+                        </article>
+                        <article class="joao_destaque">
+                            <h3>Jogo do mês</h3>
+                            <p>Todo mês o portal escolhe um jogo para destacar. Este mês o destaque vai para os jogos de aventura, com mundos grandes para explorar e muitas missões para cumprir.</p>
+                        </article>
+                        <article class="joao_destaque">
+                            <h3>Novidades</h3>
+                            <p>Lançamentos da semana.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- ABAS (6 abas) -->
+                <section id="joao_generos">
+                    <h2>Gêneros de jogos</h2>
+                    <div class="joao_abas">
+                        <button class="joao_aba_botao joao_ativa" onclick="abrirAba(0)">Aventura</button>
+                        <button class="joao_aba_botao" onclick="abrirAba(1)">Ação</button>
+                        <button class="joao_aba_botao" onclick="abrirAba(2)">RPG</button>
+                        <button class="joao_aba_botao" onclick="abrirAba(3)">Esporte</button>
+                        <button class="joao_aba_botao" onclick="abrirAba(4)">Corrida</button>
+                        <button class="joao_aba_botao" onclick="abrirAba(5)">Puzzle</button>
+                    </div>
+
+                    <div class="joao_aba_conteudo joao_ativa">
+                        <p>Aventura: jogos de exploração e história, onde o jogador descobre lugares novos.</p>
+                    </div>
+                    <div class="joao_aba_conteudo">
+                        <p>Ação: jogos rápidos, com combate e reflexo.</p>
+                    </div>
+                    <div class="joao_aba_conteudo">
+                        <p>RPG: o jogador controla um personagem que evolui e faz escolhas.</p>
+                    </div>
+                    <div class="joao_aba_conteudo">
+                        <p>Esporte: simulam esportes como futebol, basquete e outros.</p>
+                    </div>
+                    <div class="joao_aba_conteudo">
+                        <p>Corrida: disputas de velocidade com carros e motos.</p>
+                    </div>
+                    <div class="joao_aba_conteudo">
+                        <p>Puzzle: quebra-cabeças que exigem raciocínio e lógica.</p>
+                    </div>
+                </section>
+
+                <!-- GALERIA (GRID A: repeat(3, 1fr)) -->
+                <section id="joao_galeria">
+                    <h2>Galeria</h2>
+                    <div class="joao_galeria">
+                        <img src="img/jogo1.jpg" alt="Jogo de aventura">
+                        <img src="img/jogo2.jpg" alt="Jogo de ação">
+                        <img src="img/jogo3.jpg" alt="Jogo de RPG">
+                        <img src="img/jogo4.jpg" alt="Jogo de esporte">
+                        <img src="img/jogo5.jpg" alt="Jogo de corrida">
+                        <img src="img/jogo6.jpg" alt="Jogo de puzzle">
+                    </div>
+                </section>
+
+                <!-- CARDS (4 cards) -->
+                <section id="joao_cards">
+                    <h2>Dicas rápidas</h2>
+                    <div class="joao_cards">
+                        <article class="joao_card">
+                            <h3>Descanse</h3>
+                            <p>Faça pausas a cada hora de jogo.</p>
+                        </article>
+                        <article class="joao_card">
+                            <h3>Jogue em grupo</h3>
+                            <p>Jogar com amigos deixa tudo mais divertido.</p>
+                        </article>
+                        <article class="joao_card">
+                            <h3>Experimente</h3>
+                            <p>Teste gêneros diferentes dos que você já conhece.</p>
+                        </article>
+                        <article class="joao_card">
+                            <h3>Organize-se</h3>
+                            <p>Monte uma lista de jogos para jogar depois.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- TABELA 7x5 (7 linhas e 5 colunas) -->
+                <section id="joao_tabela">
+                    <h2>Jogos famosos</h2>
+                    <table>
+                        <caption>Tabela de jogos famosos</caption>
+                        <thead>
+                            <tr>
+                                <th>Jogo</th>
+                                <th>Gênero</th>
+                                <th>Ano</th>
+                                <th>Plataforma</th>
+                                <th>Nota do portal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Zelda: Breath of the Wild</td>
+                                <td>Aventura</td>
+                                <td>2017</td>
+                                <td>Nintendo Switch</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Hollow Knight</td>
+                                <td>Ação</td>
+                                <td>2017</td>
+                                <td>PC</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>The Witcher 3</td>
+                                <td>RPG</td>
+                                <td>2015</td>
+                                <td>PC</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Rocket League</td>
+                                <td>Esporte</td>
+                                <td>2015</td>
+                                <td>PC</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Mario Kart 8</td>
+                                <td>Corrida</td>
+                                <td>2014</td>
+                                <td>Nintendo Switch</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Tetris</td>
+                                <td>Puzzle</td>
+                                <td>1984</td>
+                                <td>Vários</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- FAQ / ACCORDION (6 itens) -->
+                <section id="joao_faq">
+                    <h2>Perguntas frequentes</h2>
+
+                    <div class="joao_faq_item">
+                        <button class="joao_faq_pergunta" onclick="abrirFaq(1)">O que é o Portal Games?</button>
+                        <div class="joao_resposta" id="joao_resposta1">
+                            <p>É um site feito para mostrar informações sobre jogos.</p>
+                        </div>
+                    </div>
+
+                    <div class="joao_faq_item">
+                        <button class="joao_faq_pergunta" onclick="abrirFaq(2)">Preciso pagar para usar?</button>
+                        <div class="joao_resposta" id="joao_resposta2">
+                            <p>Não, o portal é gratuito.</p>
+                        </div>
+                    </div>
+
+                    <div class="joao_faq_item">
+                        <button class="joao_faq_pergunta" onclick="abrirFaq(3)">Como me cadastro?</button>
+                        <div class="joao_resposta" id="joao_resposta3">
+                            <p>Basta preencher o formulário de cadastro no final da página.</p>
+                        </div>
+                    </div>
+
+                    <div class="joao_faq_item">
+                        <button class="joao_faq_pergunta" onclick="abrirFaq(4)">Posso indicar um jogo?</button>
+                        <div class="joao_resposta" id="joao_resposta4">
+                            <p>Sim, use o campo de mensagem do formulário.</p>
+                        </div>
+                    </div>
+
+                    <div class="joao_faq_item">
+                        <button class="joao_faq_pergunta" onclick="abrirFaq(5)">Como uso a lista de jogos?</button>
+                        <div class="joao_resposta" id="joao_resposta5">
+                            <p>Digite o nome do jogo, clique em Adicionar e depois apague o que quiser.</p>
+                        </div>
+                    </div>
+
+                    <div class="joao_faq_item">
+                        <button class="joao_faq_pergunta" onclick="abrirFaq(6)">Posso mudar a cor do site?</button>
+                        <div class="joao_resposta" id="joao_resposta6">
+                            <p>Sim, use os botões da área lateral.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LISTA DINÂMICA -->
+                <section id="joao_lista_secao">
+                    <h2>Minha lista de jogos</h2>
+                    <input type="text" id="joao_item_texto" class="joao_campo" placeholder="Digite o nome de um jogo">
+                    <button onclick="adicionarItem()">Adicionar</button>
+                    <button onclick="apagarTudo()">Apagar tudo</button>
+                    <p id="joao_aviso_lista"></p>
+                    <ul id="joao_lista"></ul>
+                </section>
+
+                <!-- FORMULÁRIO -->
+                <section id="joao_cadastro">
+                    <h2>Cadastro</h2>
+                    <form id="joao_form">
+                        <fieldset>
+                            <legend>Dados do jogador</legend>
+
+                            <label for="joao_nome">Nome:</label>
+                            <input type="text" id="joao_nome" class="joao_campo">
+
+                            <label for="joao_email">E-mail:</label>
+                            <input type="text" id="joao_email" class="joao_campo">
+
+                            <label for="joao_idade">Idade:</label>
+                            <input type="number" id="joao_idade" class="joao_campo">
+
+                            <label for="joao_plataforma">Plataforma favorita:</label>
+                            <select id="joao_plataforma" class="joao_campo">
+                                <option value="">Escolha...</option>
+                                <option value="PC">PC</option>
+                                <option value="Console">Console</option>
+                                <option value="Celular">Celular</option>
+                            </select>
+
+                            <p>Tipo de jogador:</p>
+                            <label class="joao_inline"><input type="radio" name="joao_tipo" value="Casual"> Casual</label>
+                            <label class="joao_inline"><input type="radio" name="joao_tipo" value="Competitivo"> Competitivo</label>
+
+                            <label for="joao_mensagem">Mensagem:</label>
+                            <textarea id="joao_mensagem" class="joao_campo" rows="4"></textarea>
+
+                            <label class="joao_inline"><input type="checkbox" id="joao_termos"> Aceito receber novidades</label>
+
+                            <br>
+                            <button type="button" onclick="validarFormulario()">Enviar</button>
+                            <p id="joao_mensagem_form"></p>
+                        </fieldset>
+                    </form>
+                </section>
+
+            </div>
+
+            <!-- ÁREA LATERAL -->
+            <aside class="joao_lateral">
+                <h3>Personalizar</h3>
+                <p>Escolha uma cor:</p>
+                <button onclick="mudarCor('joao_azul')">Azul</button>
+                <button onclick="mudarCor('joao_verde')">Verde</button>
+                <button onclick="mudarCor('joao_vermelho')">Vermelho</button>
+                <button onclick="mudarCor('joao_roxo')">Roxo</button>
+                <p>Modo de exibição:</p>
+                <button onclick="alternarModo()">Claro / Escuro</button>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 João Felipe - Trabalho Integrador de Front End</p>
+    </footer>
+
+    <!-- JAVASCRIPT EXTERNO (fica no final para os elementos já existirem) -->
+    <script src="script.js"></script>
+</body>
+</html>
